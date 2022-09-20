@@ -42,13 +42,14 @@
   list-style: none;
 }
 
-.navbar-links li a {
+.id_mark,
+.move {
   display: block;
   text-decoration: none;
   color: white;
   padding: 1rem;
 }
 
-.navbar-links li:hover {
+.move:hover {
   background-color: #555;
 }

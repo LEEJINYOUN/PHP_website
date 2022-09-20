@@ -62,15 +62,28 @@ if(isset($_GET['page'])) {
                         <?php echo
                          $num2 ?>
                     </td>
-                    <td class="td_title view td_contents"
-                        onclick="location.href='read.php?number=<?php echo $rows['number']?>'">
+                    <td class="td_title view_title td_contents">
                         <?php
+                        $lockImg = "<img src='./icon/lock.jpg' alt='lock' class='lock'>";
+                        if ($rows['lock_pw'] != '') { ?>
+                        <a href="lock.php?number=<?php echo $rows['number']?>" class="view">
+                            <?php
+                        if(mb_strlen($rows['title']) > 30){
+                            echo $title = str_replace($rows['title'], mb_substr($rows['title'],0,30,"utf-8")."...",$rows['title']), $lockImg;
+                        } else {
+                            echo $title2 = $rows['title'], $lockImg;
+                        }                 
+                        ?></a>
+                        <?php } else {?>
+                        <a href="read.php?number=<?php echo $rows['number']?>" class="view">
+                            <?php 
                         if(mb_strlen($rows['title']) > 30){
                             echo $title = str_replace($rows['title'], mb_substr($rows['title'],0,30,"utf-8")."...",$rows['title']);
                         } else {
                             echo $title2 = $rows['title'];
                         }
-                        ?>
+                        ?></a>
+                        <?php } ?>
                     </td>
                     <td class="td_id td_contents">
                         <?=htmlspecialchars($rows['id'])?></td>

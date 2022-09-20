@@ -20,10 +20,6 @@
     $result = $connnect->query($query);
     $rows = mysqli_fetch_assoc($result);
     ?>
-    <?php
-    $bno = $_GET['number'];
-    $sql = "SELECT * FROM board WHERE `number` = '$bno'";
-    ?>
 
     <section class="read_container">
         <table class="table table-striped">

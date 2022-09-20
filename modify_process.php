@@ -3,9 +3,10 @@ require('conn.php');
 $number = mysqli_real_escape_string($connnect, $_POST['number']);
 $title = mysqli_real_escape_string($connnect, $_POST['title']);
 $content = mysqli_real_escape_string($connnect, $_POST['content']);
+$newlock_pw = mysqli_real_escape_string($connnect, $_POST['lock_pw']);
 $date = date('Y-m-d H:i:s');
 $date_now = date('Y-m-d H:i:s', strtotime($date."+9 hours"));
-$query = "UPDATE `board` SET `title`='$title',`content`='$content',`date`='$date_now' WHERE `number`='$number'";
+$query = "UPDATE `board` SET `title`='$title', `content`='$content', `lock_pw`='$newlock_pw', `date`='$date_now' WHERE `number`='$number'";
 $result = $connnect->query($query);
 
 if($result) {

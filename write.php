@@ -39,6 +39,10 @@
                                         required></textarea>
                                 </td>
                             </tr>
+                            <tr>
+                                <td class="write_tr_td_one">잠금 비밀번호</td>
+                                <td class="write_tr_td_two"><input type="text" name="lock_pw" size="10"></td>
+                            </tr>
                         </table>
                         <div class="btns">
                             <input type="submit" value="작성" class="writeBtn">

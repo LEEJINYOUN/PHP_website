@@ -77,8 +77,25 @@ ul li {
   border-top: 1px solid #efefef;
 }
 
-.view {
+.td_contents > a {
+  display: flex;
+  flex-direction: row;
   text-align: start;
+  align-items: center;
+  vertical-align: middle;
+  width: 67%;
+}
+
+.lock {
+  width: 20px;
+  height: 20px;
+}
+
+.view_title {
+  text-align: start;
+}
+
+.view {
   cursor: pointer;
 }
 

@@ -16,8 +16,8 @@
         <a href="board.php" class="brand-title">웹 게시판</a>
         <div class="navbar-links">
             <ul>
-                <li><a href="login.php">로그인</a></li>
-                <li><a href="join.php">회원가입</a></li>
+                <li><a href="login.php" class="move">로그인</a></li>
+                <li><a href="join.php" class="move">회원가입</a></li>
             </ul>
         </div>
     </section>
@@ -26,7 +26,8 @@
         <a href="board.php" class="brand-title">웹 게시판</a>
         <div class="navbar-links">
             <ul>
-                <li><a href="logout.php">로그아웃</a></li>
+                <li><a class="id_mark"><?php echo $_SESSION['id'].'님'?></a></li>
+                <li><a href="logout.php" class="move">로그아웃</a></li>
             </ul>
         </div>
     </section>

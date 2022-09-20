@@ -3,13 +3,14 @@ require('conn.php');
 $id = mysqli_real_escape_string($connnect, $_POST['name']);
 $title = mysqli_real_escape_string($connnect, $_POST['title']);
 $content = mysqli_real_escape_string($connnect, $_POST['content']);
+$lock_pw = mysqli_real_escape_string($connnect, $_POST['lock_pw']);
 $date = date('Y-m-d H:i:s');
 $date_now = date('Y-m-d H:i:s', strtotime($date."+9 hours"));
 $URL = 'board.php';
 $query = "INSERT INTO 
                     `board`
-                    (`number`, `title`, `content`, `id`, `date`, `hit`) 
-                    VALUES (NULL,'{$title}','{$content}','{$id}','{$date_now}','0')";
+                    (`number`, `title`, `content`, `id`, `date`, `hit`, `lock_pw`) 
+                    VALUES (NULL, '{$title}', '{$content}', '{$id}', '{$date_now}', '0', '{$lock_pw}')";
 $result = mysqli_query($connnect, $query);
 
 if ($result) { ?>

@@ -14,7 +14,7 @@
     session_start();
     require('conn.php');
     $number = $_GET['number'];
-    $query = "SELECT `title`, `content`, `id`, `date` FROM `board` WHERE number = $number";
+    $query = "SELECT `title`, `content`, `id`, `date`, `lock_pw` FROM `board` WHERE number = $number";
     $result = $connnect->query($query);
     $rows = mysqli_fetch_assoc($result);
     
@@ -49,6 +49,10 @@
                                 <td class="write_tr_td_one">내용</td>
                                 <td class="write_tr_td_two"><textarea name="content" cols="85"
                                         rows="15"><?=$content?></textarea></td>
+                            </tr>
+                            <tr>
+                                <td class="write_tr_td_one">잠금 비밀번호</td>
+                                <td class="write_tr_td_two"><input type="text" name="lock_pw" size="10"></td>
                             </tr>
                         </table>
                         <div class="btns">
