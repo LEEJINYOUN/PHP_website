@@ -1,13 +1,13 @@
 <?php
 session_start();
 require('conn.php');
-$id = mysqli_real_escape_string($connnect, $_POST['id']);
-$pw = mysqli_real_escape_string($connnect, $_POST['pw']);
-$sql = "select * from member where id='$id' and pw='$pw'";
-$result = $connnect->query($sql);
-$row = mysqli_fetch_array($result);
-if ($result -> num_rows > 0){
-    $_SESSION['id'] = $row['id'];
+$login_id = mysqli_real_escape_string($connnect, $_POST['id']);
+$login_pw = mysqli_real_escape_string($connnect, $_POST['pw']);
+$login_query = "SELECT * FROM `member` WHERE id='$login_id' and pw='$login_pw'";
+$login_result = $connnect->query($login_query);
+$login_row = mysqli_fetch_array($login_result);
+if ($login_result -> num_rows > 0){
+    $_SESSION['id'] = $login_row['id'];
     if(isset($_SESSION['id'])) {
         echo "<script>location.href='board.php';</script>";
     }

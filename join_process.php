@@ -1,23 +1,23 @@
 <?php
 require('conn.php');
-$id = mysqli_real_escape_string($connnect, $_POST['id']);
-$pw = mysqli_real_escape_string($connnect, $_POST['pw']);
-$date = date('Y-m-d H:i:s');
-$date_now = date('Y-m-d H:i:s', strtotime($date."+9 hours"));
-$query = "select * from member where id='$id'";
-$result = mysqli_query($connnect, $query);
+$join_id = mysqli_real_escape_string($connnect, $_POST['id']);
+$join_pw = mysqli_real_escape_string($connnect, $_POST['pw']);
+$join_date = date('Y-m-d H:i:s');
+$join_date_now = date('Y-m-d H:i:s', strtotime($join_date."+9 hours"));
+$join_query = "SELECT * FROM `member` WHERE id='$join_id'";
+$join_result = mysqli_query($connnect, $join_query);
 
-if($result->num_rows > 0) {
-    $row = mysqli_fetch_assoc($result);
-    $id = $row['id'];
+if($join_result->num_rows > 0) {
+    $join_row = mysqli_fetch_assoc($join_result);
+    $join_id = $join_row['id'];
     echo "<script>alert('존재하는 아이디입니다');</script>";
     echo "<script>location.href='join.php';</script>";
 }
 else {
-    $query = "INSERT INTO `member`(`id`, `pw`, `date`, `permit`) VALUES ('$id','$pw','$date_now','0')";
-    $result = $connnect->query($query);
-    $id = mysqli_insert_id($connnect);
-    echo "<script>alert('회원가입 성공!');</script>";
+    $join_insert_query = "INSERT INTO `member`(`id`, `pw`, `date`, `permit`) VALUES ('$join_id','$join_pw','$join_date_now','0')";
+    $join_insert_result = $connnect->query($join_insert_query);
+    $join_id = mysqli_insert_id($connnect);
+    echo "<script>alert('회원가입 성공');</script>";
 }
 echo "<script>location.href='board.php';</script>";
 ?>

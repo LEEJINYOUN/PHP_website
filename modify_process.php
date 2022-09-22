@@ -1,22 +1,21 @@
 <?php
 require('conn.php');
-$number = mysqli_real_escape_string($connnect, $_POST['number']);
-$title = mysqli_real_escape_string($connnect, $_POST['title']);
-$content = mysqli_real_escape_string($connnect, $_POST['content']);
-$newlock_pw = mysqli_real_escape_string($connnect, $_POST['lock_pw']);
-$date = date('Y-m-d H:i:s');
-$date_now = date('Y-m-d H:i:s', strtotime($date."+9 hours"));
-$query = "UPDATE `board` SET `title`='$title', `content`='$content', `lock_pw`='$newlock_pw', `date`='$date_now' WHERE `number`='$number'";
-$result = $connnect->query($query);
+$modify_number = mysqli_real_escape_string($connnect, $_POST['number']);
+$modify_title = mysqli_real_escape_string($connnect, $_POST['title']);
+$modify_content = mysqli_real_escape_string($connnect, $_POST['content']);
+$modify_newlock_pw = mysqli_real_escape_string($connnect, $_POST['lock_pw']);
+$modify_date = date('Y-m-d H:i:s');
+$modify_date_now = date('Y-m-d H:i:s', strtotime($modify_date."+9 hours"));
+$modify_query = "UPDATE `board` SET `title`='$modify_title', `content`='$modify_content', `lock_pw`='$modify_newlock_pw', `date`='$modify_date_now' WHERE `number`='$modify_number'";
+$modify_result = $connnect->query($modify_query);
 
-if($result) {
-?>
+if($modify_result) { ?>
 <script>
-alert('수정되었습니다');
-location.replace("read.php?number=<?php echo $number?>");
+alert('글이 수정되었습니다');
+location.replace("read.php?number=<?php echo $modify_number?>");
 </script>
 <?php
 } else {
-    echo 'fail';
+    echo '글 수정 실패';
 }
 ?>

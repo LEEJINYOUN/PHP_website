@@ -1,7 +1,7 @@
 <?php 
 session_start();
-$session = session_destroy();
-if($session){
+$logout_session = session_destroy();
+if($logout_session){
     echo "<script>location.href='board.php';</script>";
 }
 ?>

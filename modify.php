@@ -13,14 +13,14 @@
     <?php
     session_start();
     require('conn.php');
-    $number = $_GET['number'];
-    $query = "SELECT `title`, `content`, `id`, `date`, `lock_pw` FROM `board` WHERE number = $number";
-    $result = $connnect->query($query);
-    $rows = mysqli_fetch_assoc($result);
+    $modify_number = $_GET['number'];
+    $modify_query = "SELECT `title`, `content`, `id`, `date`, `lock_pw` FROM `board` WHERE number = $modify_number";
+    $modify_result = $connnect->query($modify_query);
+    $modify_rows = mysqli_fetch_assoc($modify_result);
     
-    $title = $rows['title'];
-    $content = $rows['content'];
-    $userid = $rows['id'];
+    $modify_title = $modify_rows['title'];
+    $modify_content = $modify_rows['content'];
+    $modify_userid = $modify_rows['id'];
     ?>
 
     <section class="modify_container">
@@ -43,12 +43,12 @@
                             <tr>
                                 <td class="write_tr_td_one">제목</td>
                                 <td class="write_tr_td_two"><input type="text" name="title" size="60"
-                                        value="<?=$title?>"></td>
+                                        value="<?=$modify_title?>"></td>
                             </tr>
                             <tr>
                                 <td class="write_tr_td_one">내용</td>
                                 <td class="write_tr_td_two"><textarea name="content" cols="85"
-                                        rows="15"><?=$content?></textarea></td>
+                                        rows="15"><?=$modify_content?></textarea></td>
                             </tr>
                             <tr>
                                 <td class="write_tr_td_one">잠금 비밀번호</td>
@@ -56,9 +56,9 @@
                             </tr>
                         </table>
                         <div class="btns">
-                            <input type="hidden" name="number" value="<?=$number?>">
+                            <input type="hidden" name="number" value="<?=$modify_number?>">
                             <input type="submit" value="작성" class="modifyBtn">
-                            <a href="read.php?number=<?=$number?>" class="cancelBtn">취소</a>
+                            <a href="read.php?number=<?=$modify_number?>" class="cancelBtn">취소</a>
                         </div>
                     </td>
                 </tr>
