@@ -6,7 +6,6 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./css/login.css">
-    <script defer src="./js/join.js"></script>
     <title>Document</title>
 </head>
 
@@ -22,7 +21,6 @@
                 <div class="field space">
                     <span class="fa fa-lock"></span>
                     <input type="password" name="pw" class="pass-key" required placeholder="비밀번호" />
-                    <span class="show">SHOW</span>
                 </div>
                 <div class="field">
                     <input type="submit" value="회원가입" />
@@ -30,6 +28,7 @@
             </form>
             <div class="signup">
                 <a href="login.php">로그인</a>
+                <a href="board.php">게시판</a>
             </div>
         </div>
     </div>

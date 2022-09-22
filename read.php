@@ -12,6 +12,7 @@
 <body>
     <?php
     session_start();
+    require('navbar.php');
     require('conn.php');
     $number = $_GET['number'];
     $query = "SELECT `number`, `title`, `content`, `id`, `date`, `hit` FROM `board` WHERE `number`= $number";
@@ -88,21 +89,24 @@
 
         <?php
         $number = $_GET['number'];
+        ?>
+        <div class="reply_post">
+            <?php
         while($rows = mysqli_fetch_array($reply_result)) {
             if ($rows['board_num'] == $number) {?>
-        <div class="reply_post">
-            <div class="reply_post_left">
-                <div class="reply_post_name">
-                    <input type="hidden" name="name" value="<?= $rows['name']?>"><?= $rows['name']?>
+            <div class="reply_post_card">
+                <div class="reply_post_left">
+                    <div class="reply_post_name">
+                        <input type="hidden" name="name" value="<?= $rows['name']?>"><?= $rows['name']?>
+                    </div>
+                    <div class="reply_post_content">
+                        <textarea name="content" cols="150" rows="6"
+                            readonly><?= $rows['content']?> <?= $rows['date']?></textarea>
+                    </div>
                 </div>
-                <div class="reply_post_content">
-                    <textarea name="content" cols="150" rows="6"
-                        readonly><?= $rows['content']?> <?= $rows['date']?></textarea>
-                </div>
-            </div>
 
 
-            <?php
+                <?php
         if(isset($_SESSION['id'])) { 
             if($_SESSION['id'] == $rows['name']) {
                 echo
@@ -110,8 +114,9 @@
                     <a class='reply_delete_Btn' href='reply_delete_process.php?number=".$rows['number']."&board_num=".$rows['board_num']."'>삭제</a>
                 </div>";
             }
-            }}
-        }
+            }} ?>
+            </div>
+            <?php }
         ?>
         </div>
 

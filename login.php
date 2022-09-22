@@ -28,6 +28,7 @@
             </form>
             <div class="login">
                 <a href="join.php">회원가입</a>
+                <a href="board.php">게시판</a>
             </div>
         </div>
     </div>

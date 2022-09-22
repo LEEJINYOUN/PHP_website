@@ -11,6 +11,8 @@
 
 <body>
     <?php
+    session_start();
+    require('navbar.php');
     require('conn.php');
     $lock_number = $_GET['number'];
     $lock_query = "SELECT `lock_pw` FROM `board` WHERE number = $lock_number";

@@ -5,7 +5,7 @@ a {
 .lock_container {
   margin: auto;
   width: 80%;
-  height: 90vh;
+  height: 80vh;
   display: flex;
   flex-direction: column;
   justify-content: center;

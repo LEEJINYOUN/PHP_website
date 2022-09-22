@@ -12,6 +12,7 @@
 <body>
     <?php
     session_start();
+    require('navbar.php');
     ?>
     <section class="write_container">
         <form class="write_form" action="write_process.php" method="post">
