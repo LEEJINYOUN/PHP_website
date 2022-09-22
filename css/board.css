@@ -145,3 +145,8 @@ ul li {
   background-color: rgb(9, 78, 151);
   transition: all 0.5s ease;
 }
+
+.reply_count {
+  font-weight: bold;
+  color: blue;
+}

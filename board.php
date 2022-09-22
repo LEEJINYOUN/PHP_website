@@ -56,7 +56,8 @@ if(isset($_GET['page'])) {
             </thead>
             <tbody class="tbody">
                 <?php
-            while($rows=mysqli_fetch_array($res2)){?>   
+                while($rows=mysqli_fetch_array($res2)){
+                    ?>
                 <tr class="tr">
                     <td class="td_total td_contents">
                         <?php echo
@@ -69,20 +70,27 @@ if(isset($_GET['page'])) {
                         <a href="lock.php?number=<?php echo $rows['number']?>" class="view">
                             <?php
                         if(mb_strlen($rows['title']) > 30){
-                            echo $title = str_replace($rows['title'], mb_substr($rows['title'],0,30,"utf-8")."...",$rows['title']), $lockImg;
-                        } else {
-                            echo $title2 = $rows['title'], $lockImg;
-                        }                 
-                        ?></a>
+                            echo $title = str_replace($rows['title'], mb_substr($rows['title'],0,30,"utf-8")."...",$rows['title']), $lockImg; ?>
+                            <div class="reply_count">[<?= $rows['reply_count']?>]</div>
+                            <?php } else {
+                            echo $title2 = $rows['title'], $lockImg; ?>
+                            <div class="reply_count">[<?= $rows['reply_count']?>]</div>
+                            <?php } ?>
+                        </a>
                         <?php } else {?>
                         <a href="read.php?number=<?php echo $rows['number']?>" class="view">
                             <?php 
                         if(mb_strlen($rows['title']) > 30){
-                            echo $title = str_replace($rows['title'], mb_substr($rows['title'],0,30,"utf-8")."...",$rows['title']);
+                            echo $title = str_replace($rows['title'], mb_substr($rows['title'],0,30,"utf-8")."...",$rows['title']); ?>
+                            <div class="reply_count">[<?= $rows['reply_count']?>]</div>
+                            <?php
                         } else {
-                            echo $title2 = $rows['title'];
+                            echo $title2 = $rows['title']; ?>
+                            <div class="reply_count">[<?= $rows['reply_count']?>]</div>
+                            <?php
                         }
-                        ?></a>
+                        ?>
+                        </a>
                         <?php } ?>
                     </td>
                     <td class="td_id td_contents">
