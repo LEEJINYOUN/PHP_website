@@ -95,29 +95,27 @@
         while($rows = mysqli_fetch_array($reply_result)) {
             if ($rows['board_num'] == $number) {?>
             <div class="reply_post_card">
-                <div class="reply_post_left">
-                    <div class="reply_post_name">
-                        <input type="hidden" name="name" value="<?= $rows['name']?>"><?= $rows['name']?>
+                <div class="reply_post_card_top">
+                    <div class="reply_post_card_top_NameDate">
+                        <span class="reply_post_card_top_name"><?= $rows['name']?></span>
+                        <span class="reply_post_card_top_date"><?= $rows['date']?></span>
                     </div>
-                    <div class="reply_post_content">
-                        <textarea name="content" cols="150" rows="6"
-                            readonly><?= $rows['content']?> <?= $rows['date']?></textarea>
-                    </div>
+                    <?php
+                if(isset($_SESSION['id'])) {
+                    if($_SESSION['id'] == $rows['name']) {
+                        echo
+                        "<div class='reply_post_card_top_btn'>
+                            <a class='reply_delete_btn' href='reply_delete_process.php?number=".$rows['number']."&board_num=".$rows['board_num']."'>삭제</a>
+                        </div>";
+                    }
+                }
+                ?>
                 </div>
-
-
-                <?php
-        if(isset($_SESSION['id'])) { 
-            if($_SESSION['id'] == $rows['name']) {
-                echo
-                "<div class='reply_post_right'>
-                    <a class='reply_delete_Btn' href='reply_delete_process.php?number=".$rows['number']."&board_num=".$rows['board_num']."'>삭제</a>
-                </div>";
-            }
-            }} ?>
+                <div class="reply_post_card_botton">
+                    <?= $rows['content']?>
+                </div>
             </div>
-            <?php }
-        ?>
+            <?php } } ?>
         </div>
 
         <?php

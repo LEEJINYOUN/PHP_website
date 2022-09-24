@@ -32,12 +32,12 @@
     $page_query = "SELECT * FROM `board`";
     $page_result = $connnect->query($page_query);
     $page_total_board_num = mysqli_num_rows($page_result);
-    $page_total_page_num = ceil($page_total_board_num / 10);
-    $page_total_block_num = ceil($page_total_page_num / 5);
-    $page_current_page_num = (($page - 1) * 10);
-    $page_board_num_query = "SELECT *FROM `board` ORDER BY number DESC LIMIT $page_current_page_num, 10";
+    $page_total_page_num = ceil($page_total_board_num / 3);
+    $page_total_block_num = ceil($page_total_page_num / 2);
+    $page_current_page_num = (($page - 1) * 3);
+    $page_board_num_query = "SELECT *FROM `board` ORDER BY number DESC LIMIT $page_current_page_num, 3";
     $page_board_num_result = $connnect->query($page_board_num_query);
-    $page_order_num = (($page - 1) * 10) + 1;
+    $page_order_num = (($page - 1) * 3) + 1;
     ?>
 
     <section class="container">
@@ -112,13 +112,13 @@
             <?php 
                 $page_before = $pagination - 1;
                 $page_after = $pagination + 1;
-                $page_prev = $page_before * 5;
-                $page_next = $page_after * 5 - 4;
+                $page_prev = $page_before * 2;
+                $page_next = $page_after * 2 - 1;
                 if($pagination > 1)
                 {
                     echo "<a class='page_before_btn' href='board.php?pagination=$page_before&page=$page_prev'>&laquo;</a>";
                 }
-                for($i = $pagination * 5 - 4; $i <= $pagination * 5; $i++)
+                for($i = $pagination * 2 - 1; $i <= $pagination * 2; $i++)
                 {
                     if($i <= $page_total_page_num) {
                     echo "<a class='board_pagination_number' href='board.php?pagination=$pagination&page=$i'>[$i]</a>";
