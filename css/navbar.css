@@ -43,6 +43,7 @@
 }
 
 .id_mark,
+.note,
 .move {
   display: block;
   text-decoration: none;
@@ -50,6 +51,7 @@
   padding: 1rem;
 }
 
+.note:hover,
 .move:hover {
   background-color: #555;
 }

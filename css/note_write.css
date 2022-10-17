@@ -1,0 +1,70 @@
+aside {
+  width: 180px;
+  height: 100%;
+  background: #a9e2f3; /* Old browsers */
+  background: -moz-linear-gradient(
+    top,
+    #a9e2f3 0%,
+    #ffffff 100%
+  ); /* FF3.6-15 */
+  background: -webkit-linear-gradient(
+    top,
+    #a9e2f3 0%,
+    #ffffff 100%
+  ); /* Chrome10-25,Safari5.1-6 */
+  top: 0;
+  margin-left: 0;
+  z-index: -100;
+  position: absolute;
+}
+#note_menu {
+  margin-top: 100px;
+  line-height: 30px;
+}
+#write_note_in {
+  width: 700px;
+  position: absolute;
+  left: 220px;
+}
+#write_form {
+  margin-left: 30px;
+  margin-top: 30px;
+  font-size: 14px;
+}
+#write_t {
+  margin-left: 30px;
+  margin-top: 30px;
+  font: bold 26px "malgun gothic";
+}
+.wr_ip input {
+  padding: 0 0 0 10px;
+  font-size: 14px;
+  border-radius: 10px;
+  border: solid 2px #d8d8d8;
+  width: 500px;
+  height: 35px;
+}
+.wr_ip textarea {
+  padding: 0 0 0 10px;
+  font-size: 14px;
+  border-radius: 10px;
+  border: solid 2px #d8d8d8;
+  width: 500px;
+  height: 400px;
+}
+.wr_ip_top {
+  margin-top: 15px;
+}
+.wri_bt {
+  padding: 10px 20px 10px 20px;
+  background: #ffbf00;
+  border: 0;
+  color: white;
+  font-size: 12px;
+}
+.wri_bt a {
+  color: white;
+}
+.wri_bt:hover {
+  background: #dba901;
+}

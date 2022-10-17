@@ -1,0 +1,128 @@
+aside {
+  width: 180px;
+  height: 100%;
+  background: -webkit-linear-gradient(top, #a9e2f3 0%, #ffffff 100%);
+  top: 0;
+  margin-left: 0;
+  z-index: -100;
+  position: absolute;
+}
+#note_menu {
+  margin-top: 100px;
+  line-height: 30px;
+}
+#note_read {
+  width: 1200px;
+  position: absolute;
+  word-break: break-all;
+  left: 220px;
+}
+#note_read_bt {
+  margin-left: -20px;
+  margin-top: 40px;
+  font-size: 14px;
+}
+#note_read_bt a {
+  margin-left: 15px;
+}
+.del_bt {
+  padding: 5px 15px 5px 15px;
+  background: #f781f3;
+  color: white;
+}
+.del_bt:hover {
+  padding: 5px 15px 5px 15px;
+  background: #f5a9f2;
+  color: white;
+}
+.dap_bt {
+  padding: 5px 15px 5px 15px;
+  background: #58d3f7;
+  color: white;
+}
+.dap_bt:hover {
+  padding: 5px 15px 5px 15px;
+  background: #81daf5;
+  color: white;
+}
+#no_ri_line {
+  width: 100%;
+  height: 1px;
+  background: gray;
+  margin-left: 0;
+  margin-top: 20px;
+}
+#note_info {
+  margin-top: 10px;
+  font-size: 16px;
+}
+#user_info {
+  line-height: 30px;
+}
+#no_ri_line2 {
+  width: 100%;
+  height: 1px;
+  background: gray;
+  margin-left: 0;
+  margin-top: 0px;
+}
+#bo_content {
+  margin-top: 20px;
+}
+
+#frn_cre {
+  display: none;
+  width: 310px;
+  height: 250px;
+  background: white;
+  border: solid 2px #e6e6e6;
+  position: absolute;
+  left: 150px;
+  top: 70px;
+  z-index: 20;
+}
+#frn_t {
+  position: relative;
+  top: 10px;
+  left: 10px;
+  font-size: 14px;
+  font-weight: bold;
+}
+#frn_st {
+  position: relative;
+  top: 20px;
+  left: 10px;
+  font-size: 13px;
+}
+.frn-table {
+  margin-left: 10px;
+  margin-top: 40px;
+}
+.frn-table thead th {
+  height: 30px;
+  border-top: 1px solid #6e6e6e;
+  border-bottom: 1px solid #6e6e6e;
+  background: #e6e6e6;
+  font-weight: bold;
+  font-size: 16px;
+}
+.frn-table tbody td {
+  padding: 10px 0;
+  height: 20px;
+  font-size: 14px;
+}
+#frn_bt {
+  position: relative;
+  margin-left: 0px;
+  margin-top: 20px;
+  font-size: 14px;
+}
+#frn_bt button {
+  border: solid 1px #bdbdbd;
+  padding: 5px 10px 5px 10px;
+  margin-left: 15px;
+  background: white;
+}
+#frn_bt button:hover {
+  background: #e6e6e6;
+}

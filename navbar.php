@@ -26,7 +26,8 @@
         <a href="board.php" class="brand-title">웹 게시판</a>
         <div class="navbar-links">
             <ul>
-                <li><a class="id_mark"><?php echo $_SESSION['id'].'님'?></a></li>
+                <li><a class="id_mark"><?php echo $_SESSION['id'].'님 환영합니다'?></a></li>
+                <li><a href="note.php" class="note">쪽지함</a></li>
                 <li><a href="logout.php" class="move">로그아웃</a></li>
             </ul>
         </div>
