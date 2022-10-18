@@ -14,57 +14,59 @@
 aside {
   width: 180px;
   height: 100%;
-  background: #a9e2f3; /* Old browsers */
-  background: -moz-linear-gradient(
-    top,
-    #a9e2f3 0%,
-    #ffffff 100%
-  ); /* FF3.6-15 */
-  background: -webkit-linear-gradient(
-    top,
-    #a9e2f3 0%,
-    #ffffff 100%
-  ); /* Chrome10-25,Safari5.1-6 */
+  background-color: rgb(215, 240, 248);
   top: 0;
   margin-left: 0;
   z-index: -100;
   position: absolute;
 }
+
 #note_menu {
   margin-top: 100px;
   line-height: 30px;
+  text-align: center;
 }
+
 #main_in {
   width: 1200px;
   position: absolute;
   left: 220px;
 }
+
 #note_bt {
   margin-top: 15px;
 }
+
 #note_bt ul li {
   float: left;
   margin-left: 20px;
 }
+
 #wri_m_bt {
   margin-left: 30px;
   padding: 10px 20px 10px 20px;
-  background: #013adf;
+  background: #58d3f7;
   border: 0;
   color: white;
   font-size: 12px;
+  cursor: pointer;
 }
+
 #wri_m_bt:hover {
-  background: #08298a;
+  background: #81daf5;
   color: white;
 }
+
 #wri_m_bt a {
   color: white;
+  text-decoration: none;
 }
+
 .list-table {
   margin-left: 0;
   margin-top: 70px;
 }
+
 .list-table thead th {
   height: 30px;
   border-top: 2px solid #09c;
@@ -72,12 +74,14 @@ aside {
   font-weight: bold;
   font-size: 16px;
 }
+
 .list-table tbody td {
   padding: 10px 0;
   border-bottom: 1px solid #ccc;
   height: 20px;
   font-size: 14px;
 }
+
 .list-table tbody:hover {
   background: #f2f2f2;
 }

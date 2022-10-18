@@ -22,8 +22,8 @@
     ?>
     <aside>
         <ul id="note_menu">
-            <li><img src="/imgs/recv.png" alt="recv" title="recv" /><a href="note.php">받은쪽지함</a></li>
-            <li><img src="/imgs/send.png" alt="recv" title="recv" /><a href="note_send.php">보낸쪽지함</a></li>
+            <li><img src="/icon/recv.png" alt="recv" title="recv" /><a href="note.php">받은쪽지함</a></li>
+            <li><img src="/icon/send.png" alt="recv" title="recv" /><a href="note_send.php">보낸쪽지함</a></li>
         </ul>
     </aside>
     <div id="write_note_in">

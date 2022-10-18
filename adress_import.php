@@ -33,27 +33,20 @@
                 ?>
                 <tbody>
                     <tr class="tc">
-                        <td><input type="checkbox" name="addck" value="<?php echo $rows['fri_id']; ?>"
-                                onClick="ckonly(this);" /></td>
+                        <td><input type="radio" name="addck" value="<?php echo $rows['fri_id']; ?>" ;" /></td>
                         <td><?php echo $rows['fri_id']; ?></td>
                         <td><?php echo $rows['fri_name']; ?></td>
                     </tr>
                 </tbody>
                 <?php } ?>
             </table>
-            <button onclick="close_wri();" id="ad_bt">추가하기</button>
+            <div class="AddBtn">
+                <button onclick="close_wri();" id="ad_bt">추가하기</button>
+            </div>
+
         </form>
     </div>
     <script type="text/javascript">
-    function ckonly(chk) {
-        let obj = document.getElementsByName("addck");
-        for (let i = 0; i < obj.length; i++) {
-            if (obj[i] != chk) {
-                obj[i].checked = false;
-            }
-        }
-    }
-
     function close_wri() {
         self.close();
     }

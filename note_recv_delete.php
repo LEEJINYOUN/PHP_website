@@ -6,6 +6,6 @@ $recv_delete_result = $connnect->query($recv_delete_query);
 
 ?>
 <script>
-alert('<?php echo '글이 삭제되었습니다.'?>');
+alert('<?php echo '쪽지가 삭제되었습니다.'?>');
 location.replace('<?php echo 'note.php' ?>');
 </script>

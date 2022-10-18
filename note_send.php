@@ -14,13 +14,11 @@
     session_start();
     require('navbar.php');
     require('conn.php');
-    $query = "SELECT * FROM `board`";
-    $result = $connnect->query($query);
     if( (isset($_SESSION['id']))){ ?>
     <aside>
         <ul id="note_menu">
-            <li><img src="/imgs/recv.png" alt="recv" title="recv" /><a href="note.php"><b>받은쪽지함</b></a></li>
-            <li><img src="/imgs/send.png" alt="recv" title="recv" /><a href="note_send.php">보낸쪽지함</a></li>
+            <li><img src="/icon/recv.png" alt="recv" title="recv" /><a href="note.php"><b>받은쪽지함</b></a></li>
+            <li><img src="/icon/send.png" alt="recv" title="recv" /><a href="note_send.php">보낸쪽지함</a></li>
         </ul>
     </aside>
     <div id="main_in">
