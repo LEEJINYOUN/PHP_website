@@ -6,6 +6,8 @@
 
 (2022/09/24) 글 비밀번호설정, 댓글 쓰기 및 삭제 추가, css 변경
 
+(2022/10/18) 쪽지함 구현, css 변경
+
 ---
 
 ## (1) 회원가입
@@ -47,5 +49,29 @@
 ## (7) 댓글 쓰기 및 삭제
 
 ![캡처](/imgs/%EB%8C%93%EA%B8%80%20%EC%93%B0%EA%B8%B0%2C%20%EC%82%AD%EC%A0%9C_readme.gif)
+
+---
+
+## (8) 쪽지함
+
+### 1) (admin) 쪽지보내기
+
+![캡처](/imgs/1.%20admin%20%EC%AA%BD%EC%A7%80%EB%B3%B4%EB%82%B4%EA%B8%B0_readme.gif)
+
+### 2) (user2) 쪽지확인
+
+![캡처](/imgs/2.%20user2%20%EC%AA%BD%EC%A7%80%20%ED%99%95%EC%9D%B8_readme.gif)
+
+### 3) (user2) 주소록으로 쪽지보내기
+
+![캡처](/imgs/3.%20user2%20%EC%A3%BC%EC%86%8C%EB%A1%9D%EC%9C%BC%EB%A1%9C%20%EC%AA%BD%EC%A7%80%20%EB%B3%B4%EB%82%B4%EA%B8%B0_readme.gif)
+
+### 4) (admin) 답장
+
+![캡처](/imgs/4.%20admin%20%EB%8B%B5%EC%9E%A5_readme.gif)
+
+### 5) (user2) 쪽지확인, 삭제
+
+![캡처](/imgs/5.%20user2%20%EC%AA%BD%EC%A7%80%ED%99%95%EC%9D%B8%2C%20%EC%82%AD%EC%A0%9C_readme.gif)
 
 ---
